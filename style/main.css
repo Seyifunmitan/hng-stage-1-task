@@ -19,11 +19,12 @@ body {
    & div {
       width: 60%;
       height: 300px;
-      aspect-ratio: 2/1;
+      aspect-ratio: 1/2;
       & img {
          width: 50%;
          height: 84%;
          border-radius: 12px;
+         min-width: 80%;
       }
    }
 

@@ -33,14 +33,13 @@ function getCurrentUTC() {
    const currentUTCElement = document.getElementById('currentUtc')
    const now = new Date();
    // set the time
-   let first = new Date('1970-01-01');
+   let first = new Date("1970/01/01");
 
    // assigning present utc time to now variable
-   let end = new Date(`${now.getUTCFullYear()}-${now.getUTCMonth() + 1}-${now.getUTCDate()}`);
-
+   let _end = `${now.getFullYear()}/${now.getUTCMonth() + 1}/${now.getUTCDate()}`
+   let end = new Date(_end)
    let milliseconds = end - first
-
-   currentUTCElement.innerHTML = `current UTC time in milliseconds: ${end - first}`
+   currentUTCElement.innerHTML = `current UTC time in milliseconds: ${milliseconds}`
 }
 
 //current day
