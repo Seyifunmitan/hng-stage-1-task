@@ -43,5 +43,5 @@ const currentUTCElement = document.getElementById('currentUtc')
 const day = getCurrentDay()
 const _currentUTCTime = getCurrentUTC()
 
-currentDayElement.innerHTML = `current day of the weeek: ${day.toLocaleUpperCase()}`
+currentDayElement.innerHTML = `current day of the week: ${day.toLocaleUpperCase()}`
 currentUTCElement.innerHTML = _currentUTCTime
