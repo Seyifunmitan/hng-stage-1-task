@@ -17,10 +17,10 @@ body {
    justify-content: space-evenly;
    text-transform: capitalize;
    & div {
-      width: 50%;
+      width: 60%;
       height: 300px;
       & img {
-         width: 54%;
+         width: 60%;
          height: 90%;
          border-radius: 12px;
       }
@@ -32,7 +32,6 @@ body {
 }
 
 .container a {
-   text-decoration: none;
    color: #000;
-   font-size: 20px;
+   font-size: 21px;
 }

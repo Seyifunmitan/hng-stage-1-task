@@ -32,11 +32,8 @@ function getCurrentDay() {
 function getCurrentUTC() {
    const now = new Date();
 
-   const hours = now.getUTCHours();
-   const minutes = now.getUTCMinutes();
-   const seconds = now.getUTCSeconds();
    const milliseconds = now.getUTCMilliseconds();
-   return `${hours}:${minutes}:${seconds}.${milliseconds}`
+   return `current UTc time in milliseconds: ${milliseconds}`
 }
 
 //dom manipulation
