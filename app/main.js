@@ -30,6 +30,7 @@ function getCurrentDay() {
 
 //get current UTC Time
 function getCurrentUTC() {
+   const currentUTCElement = document.getElementById('currentUtc')
    const now = new Date();
    // set the time
    let first = new Date('1970-01-01');
@@ -37,17 +38,15 @@ function getCurrentUTC() {
    // assigning present utc time to now variable
    let end = new Date(`${now.getUTCFullYear()}-${now.getUTCMonth() + 1}-${now.getUTCDate()}`);
 
-   let milliseconds = (end - first);
+   let milliseconds = end - first
 
-   return `current UTC time in milliseconds: ${milliseconds}`
+   currentUTCElement.innerHTML = `current UTC time in milliseconds: ${end - first}`
 }
 
-//dom manipulation
+//current day
 const currentDayElement = document.getElementById('currentDay')
-const currentUTCElement = document.getElementById('currentUtc')
-
 const day = getCurrentDay()
-const _currentUTCTime = getCurrentUTC()
-
 currentDayElement.innerHTML = `current day of the Week: ${day.toLocaleUpperCase()}`
-currentUTCElement.innerHTML = _currentUTCTime
+
+//get currentUTC milliseconds
+getCurrentUTC()
