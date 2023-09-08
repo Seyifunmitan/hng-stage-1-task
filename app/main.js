@@ -28,24 +28,28 @@ function getCurrentDay() {
    return day
 }
 
-//get current UTC Time
-function getCurrentUTC() {
-   const currentUTCElement = document.getElementById('currentUtc')
-   const now = new Date();
-   // set the time
-   let first = new Date("1970/01/01");
-
-   // assigning present utc time to now variable
-   let _end = `${now.getFullYear()}/${now.getUTCMonth() + 1}/${now.getUTCDate()}`
-   let end = new Date(_end)
-   let milliseconds = end - first
-   currentUTCElement.innerHTML = `current UTC time in milliseconds: ${milliseconds}`
-}
-
 //current day
 const currentDayElement = document.getElementById('currentDay')
 const day = getCurrentDay()
 currentDayElement.innerHTML = `current day of the Week: ${day.toLocaleUpperCase()}`
 
-//get currentUTC milliseconds
-getCurrentUTC()
+
+
+//get current UTC Time
+//get currentUTC
+
+function loadCurrentUTC() {
+   const currentUTCElement = document.getElementById('currentUtc')
+   const currentUTC = new Date();
+
+   let hour = currentUTC.getUTCHours()
+   let minutes = currentUTC.getUTCMinutes()
+   let seconds = currentUTC.getUTCSeconds()
+   
+   const _currentUTC = `${hour}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+
+   currentUTCElement.innerHTML = `Current UTC: ${_currentUTC}`
+}
+
+
+loadCurrentUTC()
